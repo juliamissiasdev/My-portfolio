@@ -1,0 +1,256 @@
+/* Imports the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Root variables for theme colors */
+:root {
+    --main-color: #416cc0;
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --bg-color-61: #141128; /* New background color */
+    --color-00: #0000001a;
+    --color-e2: #e2e2e2; /* New border color */
+    --color-62: #29292b; /* New test color */ 
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-color-61);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: var(--bg-color-61);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    border: solid 1px var(--color-e2);
+}
+
+/* Logo styles */
+.logo {
+    color: var(--text-color); /* Color of the logo text set to white */
+}
+
+/* Navigation styles */
+.nav a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.6rem 1rem;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.nav a:hover {
+    color: var(--main-color);
+}
+
+/* Home section styles */
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.home-content {
+    width: 45%;
+}
+
+.home-content h3,
+.home-content h1 {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.home-content h1 {
+    line-height: 1.3;
+    font-size: 2.7rem; /* Test size */
+}
+
+.home-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+.home-content .btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 4%; 
+}
+
+.home-content .btn:hover {
+    background-color: var(--color-62);
+}
+
+.home-img {
+    width: 45%;
+    border-right: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
+    border-image: linear-gradient(135deg, transparent 50%, rgb(85, 132, 185)) 1;
+}
+
+.home-img img {
+    width: 100%;
+    border-right: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
+    border-image: linear-gradient(135deg, transparent 50%, rgb(51, 32, 92)) 1;
+}
+
+/* Services section styles */
+.services {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--bg-color-01);
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services-box {
+    background-color: var(--bg-color-02);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--color-00);
+    transition: transform 0.3s;
+    width: 30%;
+    margin: 1rem;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+}
+
+.services-box i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    margin: 1rem 0;
+}
+
+.services-box p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.services-box .btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.services-box .btn:hover {
+    background-color: var(--color-62);
+}
+
+/* Contact section styles */
+.contact {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--bg-color-01);
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .input-box {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+}
+
+.contact .btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact .btn:hover {
+    background-color: var(--color-62);
+}
+
+/* About section styles */
+.about {
+    padding: 5rem 0;
+    background-color: var(--bg-color-01);
+    text-align: center;
+}
+
+.about-content {
+    margin-bottom: 1rem; /* Espaço entre o texto e a imagem */
+}
+
+.about-img {
+    margin-top: 1rem; /* Espaço entre o texto e a imagem */
+    text-align: center; /* Centraliza a imagem */
+}
+
+.about-img img {
+    max-width: 95%; /* Garante que a imagem se ajuste ao container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+}
+
+.social-media a {
+    font-size: 2rem;
+    color: #0077b5; /* Cor do LinkedIn */
+}
