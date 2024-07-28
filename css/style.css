@@ -66,13 +66,15 @@ header {
 .home {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding-top: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .home-content {
-    width: 45%;
+    width: 50%;
 }
 
 .home-content h3,
@@ -105,15 +107,15 @@ header {
 }
 
 .home-img {
-    width: 45%;
-    border-right: solid 0.6rem var(--main-color);
-    border-bottom: solid 0.6rem var(--main-color);
-    border-image: linear-gradient(135deg, transparent 50%, rgb(85, 132, 185)) 1;
+    width: 40%;
+    text-align: right; /* Alinha a imagem à direita */
 }
 
 .home-img img {
     width: 100%;
-    border-right: solid 0.6rem var(--main-color);
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    border-radius: 50%; /* Adiciona uma borda arredondada à imagem */
+    border: solid 0.6rem var(--main-color);
     border-bottom: solid 0.6rem var(--main-color);
     border-image: linear-gradient(135deg, transparent 50%, rgb(51, 32, 92)) 1;
 }
@@ -253,4 +255,35 @@ footer {
 .social-media a {
     font-size: 2rem;
     color: #0077b5; /* Cor do LinkedIn */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .home-content, .home-img {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+        width: 80%;
+    }
+
+    .contact .input-box {
+        flex-direction: column;
+        width: 100%;
+    }
 }
