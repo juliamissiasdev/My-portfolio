@@ -29,6 +29,7 @@ body {
     font-size: 16px;
     background-color: var(--bg-color-61);
     color: var(--text-color);
+    padding-top: 56px; /* Space for the fixed header */
 }
 
 /* Header styles */
@@ -41,19 +42,20 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    border: solid 1px var(--color-e2);
+    border-bottom: solid 1px var(--color-e2);
 }
 
 /* Logo styles */
 .logo {
     color: var(--text-color); /* Color of the logo text set to white */
+    font-size: 1.5rem; /* Adjust as needed */
 }
 
 /* Navigation styles */
 .nav a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-color);
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     transition: 0.45s;
     cursor: pointer;
 }
@@ -68,7 +70,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 5rem; /* Space for the fixed header */
 }
 
 .home-content {
@@ -83,7 +85,7 @@ header {
 
 .home-content h1 {
     line-height: 1.3;
-    font-size: 2.7rem; /* Test size */
+    font-size: 2.5rem; /* Adjusted size */
 }
 
 .home-content p {
@@ -113,9 +115,7 @@ header {
 
 .home-img img {
     width: 100%;
-    border-right: solid 0.6rem var(--main-color);
-    border-bottom: solid 0.6rem var(--main-color);
-    border-image: linear-gradient(135deg, transparent 50%, rgb(51, 32, 92)) 1;
+    border: none; /* Removed unnecessary borders */
 }
 
 /* Services section styles */
@@ -139,7 +139,7 @@ header {
     background-color: var(--bg-color-02);
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px var(--color-00);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
     transition: transform 0.3s;
     width: 30%;
     margin: 1rem;
@@ -201,7 +201,7 @@ header {
 
 .contact input,
 .contact textarea {
-    width: 100%;
+    width: calc(100% - 2rem); /* Adjusts input width */
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 5px;
@@ -229,17 +229,17 @@ header {
 }
 
 .about-content {
-    margin-bottom: 1rem; /* Espaço entre o texto e a imagem */
+    margin-bottom: 1rem; /* Space between text and image */
 }
 
 .about-img {
-    margin-top: 1rem; /* Espaço entre o texto e a imagem */
-    text-align: center; /* Centraliza a imagem */
+    margin-top: 1rem; /* Space between text and image */
+    text-align: center; /* Centers the image */
 }
 
 .about-img img {
-    max-width: 95%; /* Garante que a imagem se ajuste ao container */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 90%; /* Ensures image fits within container */
+    height: auto; /* Maintains aspect ratio */
 }
 
 /* Footer styles */
@@ -252,5 +252,5 @@ footer {
 
 .social-media a {
     font-size: 2rem;
-    color: #0077b5; /* Cor do LinkedIn */
+    color: #0077b5; /* LinkedIn color */
 }
