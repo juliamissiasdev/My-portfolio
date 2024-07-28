@@ -29,19 +29,20 @@ body {
     font-size: 16px;
     background-color: var(--bg-color-61);
     color: var(--text-color);
+    margin-top: 60px; /* Adiciona um espaçamento no topo do corpo para evitar que o conteúdo fique escondido atrás do cabeçalho fixo */
 }
 
 /* Header styles */
 header {
-    position: fixed;
-    width: 100%;
-    padding: 1.1rem;
-    background-color: var(--bg-color-61);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
-    border: solid 1px var(--color-e2);
+    position: fixed; /* Faz o cabeçalho ficar fixo no topo */
+    top: 0;          /* Posiciona o cabeçalho no topo da página */
+    left: 0;         /* Alinha o cabeçalho ao lado esquerdo da página */
+    width: 100%;     /* Faz o cabeçalho ocupar toda a largura da página */
+    background: var(--bg-color-02); /* Define a cor de fundo do cabeçalho */
+    color: var(--text-color); /* Define a cor do texto do cabeçalho */
+    z-index: 1000;   /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destacar o cabeçalho */
+    padding: 1rem;   /* Ajusta o padding conforme necessário */
 }
 
 .logo {
